@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES Hospital</title>
+    <link rel="stylesheet" href="int.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: #fff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        footer{
+            margin: 10px 0 0;
+            font-size: 1.0em;
+            color: #00cc99;
+        }
+        .head {
+            background: #2c3e50;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .head img {
+            max-width: 100px;
+            height: auto;
+        }
+        .head h1 {
+            margin: 10px 0 0;
+            font-size: 2.5em;
+            color: #00cc99;
+        }
+        .middle {
+            text-align: center;
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .middle .section {
+            flex: 1;
+            max-width: 300px;
+            text-align: center;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .middle .section:hover {
+            transform: translateY(-10px);
+        }
+        .middle button {
+            background-color: #00cc99;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .middle button:hover {
+            background-color: #009977;
+            transform: translateY(-5px);
+        }
+        .patients-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+        .patients {
+            flex: 1;
+            max-width: 300px;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .patients h3 {
+            color: #00cc99;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .patients ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .patients ul li {
+            margin-bottom: 8px;
+        }
+        .patients a button {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <center>
+            <img src="download.jpeg" alt="ES Hospital Logo">
+            <h1>ES HOSPITAL</h1>
+        </center>
+    </div>
+    <div class="middle">
+        <div class="section">
+            <h2>Patient Admission</h2>
+            <a href="http://127.0.0.1:5501/patientinput"><button>Admit Patient</button></a>
+        </div>
+        <div class="section">
+            <h2>Patient Discharge</h2>
+            <a href="http://127.0.0.1:5501/patientdischarg"><button>Discharge Patient</button></a>
+        </div>
+    </div>
+    <div class="middle">
+    <div class="patients-container">
+        <div class="patients">
+            <h3>Patients in Hospital</h3>
+            <ul>
+                <li><a href="http://127.0.0.1:5501/patientadmit"><button>CLICK</button></a></li>
+            </ul>
+        </div>
+        <div class="patients">
+            <h3>Discharged Patients</h3>
+            <ul>
+                <li><a href="http://127.0.0.1:5501/patientdischarge"><button>CLICK</button></a></li>
+            </ul>
+        </div>
+        <div class="patients">
+            <h3>Doctor Details</h3>
+            <ul>
+                <li><a href="http://127.0.0.1:5501/doctors"><button>CLICK</button></a></li>
+            </ul>
+        </div>
+    </div></div>
+    <center><footer><p> designed by elangovan - 2024</p></footer></center>
+</body>
+</html>

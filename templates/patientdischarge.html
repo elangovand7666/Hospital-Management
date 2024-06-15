@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Details</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: #fff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+          }
+          .head {
+            background: #2c3e50;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          }
+          h2,h1 {
+            text-align: center;
+            color: #00cc99;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+          }
+          th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+          }
+          th {
+            background-color: #007BFF;
+            color: black;
+          }
+          td {
+            color: black; /* Set table data color to black */
+          }
+          tr:hover {
+            background-color: #f1f1f1;
+          }
+          @media (max-width: 600px) {
+            table, th, td {
+              display: block;
+              width: 100%;
+            }
+            th, td {
+              box-sizing: border-box;
+            }
+            thead {
+              display: none;
+            }
+            tr {
+              margin-bottom: 15px;
+            }
+            tr:before {
+              content: " ";
+              display: table;
+            }
+            tr:after {
+              content: " ";
+              display: table;
+              clear: both;
+            }
+            tr td {
+              display: block;
+              text-align: right;
+              font-size: 13px;
+              border-bottom: 1px solid #ddd;
+              position: relative;
+              padding-left: 50%;
+            }
+            tr td:before {
+              content: attr(data-label);
+              position: absolute;
+              left: 0;
+              width: 50%;
+              padding-left: 15px;
+              font-weight: bold;
+              text-align: left;
+            }
+          }
+    </style>
+</head>
+<body>
+<h1>ES HOSPITAL</h1>
+<h2>Discharged Patient Details</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Patient ID</th>
+            <th>Patient Name</th>
+            <th>Cause</th>
+            <th>Age</th>
+            <th>Doctor Name</th>
+            <th>Contact</th>
+            <th>Admited Date</th>
+            <th>Discharged date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for detail in details %}
+        <tr>
+          <td>{{ detail[0] }}</td>
+          <td>{{ detail[1] }}</td>
+          <td>{{ detail[2] }}</td>
+          <td>{{ detail[3] }}</td>
+          <td>{{ detail[4] }}</td>
+          <td>{{ detail[5] }}</td>
+          <td>{{ detail[6] }}</td>
+          <td>{{ detail[7] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
